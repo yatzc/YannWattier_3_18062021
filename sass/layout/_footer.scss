@@ -1,0 +1,20 @@
+/***********************************************
+    FOOTER
+************************************************/
+footer {
+    background-color: $color-footer;
+    margin-top: 2em;
+    padding: 1em 1em 2em 1em;
+    h2 { color: $color-body; margin: .5em 0 1em .5em; }
+    li { margin: .5em;
+        a {
+            color: $color-body;
+            &:hover {
+                color: $color-hover;
+            }
+    
+        }
+    }
+    i { margin-right: .5em; }
+    .fa-hands-helping { font-size: 12px; }
+}

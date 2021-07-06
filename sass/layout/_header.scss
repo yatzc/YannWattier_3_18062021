@@ -1,0 +1,25 @@
+/***********************************************
+    HEADER
+************************************************/
+header {
+    background-color: $color-body;
+    .head_band {
+        position: relative;
+        
+        .name_restaurant {
+            padding: 2em 2em 1em 2em;
+            text-align: center;
+        }
+        .navigation {
+            font-size: 20px;
+            padding: 2em;
+            position: absolute;
+            top: 10px;
+            z-index: 1;
+        }
+    }
+    
+    
+
+    
+}

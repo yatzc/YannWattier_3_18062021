@@ -1,0 +1,193 @@
+/***********************************************
+    MAIN - home page
+************************************************/
+.main {
+    @include media_desktop {
+        display: grid;
+        grid-template-columns: 1fr 370px;
+        grid-template-rows: 1fr;
+    }
+}
+.container_top_wrap {
+    @include media_desktop {
+        background-color: $color-primary--pastel;
+        border-radius: 15px;
+        grid-column: 2;
+        grid-row: 1;
+        margin: 1em 1em 0 .5em;
+    }
+
+    /************************
+        Container SEARCH
+    *************************/
+    .container_search {
+        text-align: center;
+        padding-bottom: 1em;
+        @include media_desktop {
+            background-color: $color-body;
+            border-radius: 15px;
+            margin: 1em;
+            padding: 0;
+        }
+        .box_search {
+            background-color: $color-search;
+            border-radius: 2px;
+            box-shadow: inset 0px 9px 10px -11px #727272;
+            padding: 1em 1em;
+            @include media_desktop {
+                border-radius: 15px 15px 0 0;
+                box-shadow: inset 0px -7px 10px -11px #727272;
+            }
+            i {
+                margin-right: .6em;
+            }
+            input {
+                border: none;
+                background-color: transparent;
+                width: 110px;
+            }
+        }
+        .text_search {
+            padding-top: 2em;
+            h4 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    /************************
+        Container TUTO
+    *************************/
+    .container_tuto {
+        background-color: $color-body;
+        padding: 2em 1em;
+        @include media_desktop {
+            border-radius: 15px;
+            margin: 1em;
+            padding: 1em;
+        }
+        .container_tuto_wrap {
+    
+            @include media_tablet {
+                display: flex;
+                justify-content: space-between;
+            }
+            @include media_desktop {
+                display: grid;
+            }
+            .box_tuto {
+                background-color: $color-main;
+                border-radius: 15px;
+                margin: 1em 0 1em .5em;
+                padding: 1.3em;
+                position: relative;
+                box-shadow: $shadow;
+                transition: .3s;
+                &:hover {
+                    background-color: $color-primary--pastel;
+                    box-shadow: $shadow_hover;
+                    cursor: pointer;
+                }
+                &:hover i {
+                    color: $color-primary;
+                }
+                .ball_number {
+                    @include ball;
+                    background: $color-primary;
+                    position: absolute;
+                    left: -12px;
+                    color: $color-main;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                i {
+                    position: absolute;
+                    left: 25px;
+                    color: $color-icon;
+                }
+                h5 {
+                    font-size: 12px;
+                }
+                h6 {
+                    margin-left: 2.5em;
+                    @include media_tablet {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+/************************
+    Container RESTAURANT
+*************************/
+.container_restaurants {
+    padding: 2em 1em 1em 1em;
+    @include media_desktop {
+        grid-column: 1;
+        grid-row: 1;
+        background-color: $color-body;
+        background-color: $color-primary--pastel;
+        border-radius: 15px;
+        margin: 1em .5em 0 1em;
+        padding: 1em;
+    }
+    .container_restaurants_wrap {
+        @include media_tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 1em;
+        }
+        @include media_desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 1em;
+        }
+    }
+    
+    .article_restaurants {
+        margin: 1em 0 1em 0;
+        background-color: $color-body;
+        border-radius: 15px;
+        box-shadow: $shadow;
+        position: relative;
+        @include media_desktop {
+            margin: 0;
+        }
+        img {
+            border-radius: 15px 15px 0 0;
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .band_restaurants {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .info_restaurants {
+                padding: 1em 1em 1em .7em;
+                h4, h5 {
+                    color: black;
+                }
+            }
+            .fa-heart {
+                top: -15px;
+            }
+            
+        }
+        .card_new {
+            background: $color-tertiary;
+            border-radius: 2px;
+            color: rgb(39, 121, 50);
+            padding: .5em .9em;
+            position: absolute;
+            right: 1em;
+            top: 1em;
+        }
+    }
+}

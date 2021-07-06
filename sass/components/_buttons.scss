@@ -1,0 +1,71 @@
+// .btn_wishlist { 
+//     
+//     outline: none;
+//     
+// }
+
+
+.btn {
+    margin: 0 auto;
+    width: 180px;
+    &--pink {
+        background: linear-gradient(
+        175deg,
+        rgba(255, 121, 218, .8)   0%,
+        rgba(209, 041, 181, .8)  15%,
+        rgba(209, 041, 181, .8)  16%,
+        rgba(116, 049, 242, .8)  99%,
+        rgba(158, 000, 126, .8) 100%
+        );
+        border: none;
+        border-radius: 25px;
+        box-shadow: $btn_shadow;
+        color: $color-body;
+        margin: 2em 0;
+        padding: 1em 0;
+        text-align: center;
+        transition: .3s;
+        &:hover {
+            box-shadow: $btn_shadow_hover;
+            cursor: pointer;
+            opacity: .8;
+        }
+    }
+}
+
+.btn_wishlist {
+    background-color: transparent;
+    border: none;
+    position: relative;
+
+    .fa-heart {
+        font-size: 30px;
+        padding-right: 1em;
+    }
+    .far.fa-heart {
+        border: 2px;
+        position: absolute;
+        right: 0px;
+        vertical-align: middle;
+        transition: all 1.5s;
+        z-index: 1;
+    }
+    .fas.fa-heart {
+        border: 2px;
+        color: $color-body;
+        mix-blend-mode: lighten;
+        position: absolute;
+        right: 0px;
+        transition: all 1.5s;
+    }
+    &:hover .far.fa-heart {
+        mix-blend-mode: lighten;
+    }
+    &:hover .fas.fa-heart {
+        background: -webkit-gradient(linear, right top, left bottom, from(rgba(171,99,255,1)), to(rgba(255,147,225,1)));
+        -webkit-background-clip: text;
+        color: transparent;
+        display: initial;
+        mix-blend-mode: darken;
+    }
+}
