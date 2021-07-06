@@ -1,7 +1,7 @@
 /***********************************************
     MAIN - home page
 ************************************************/
-.main {
+.main_home {
     @include media_desktop {
         display: grid;
         grid-template-columns: 1fr 370px;

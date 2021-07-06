@@ -33,28 +33,41 @@
 /************************
     Container STARTER, MAINS et DESSERT
 *************************/
-.container_starters {
-    margin-top: $padtop;
-}
-
-.container_starters,
-.container_mains,
-.container_desserts
-{
-    padding: 1em 1em 0em 1em;
-    article {
+.menu_wrap {
+    @include media_desktop {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        background: $color-body;
-        margin: 1em 0;
-        padding: 1em 1.4em .8em .7em;
-        border-radius: 15px;
-        box-shadow: $shadow;
-        .prix {
+    }
+    .container_starters {
+        margin-top: $padtop;
+    }
+    .container_mains,
+    .container_desserts
+    {
+        @include media_desktop {
+            margin-top: $padtop;
+        }
+        
+    }
+    
+    .container_starters,
+    .container_mains,
+    .container_desserts
+    {
+        padding: 1em 1em 0em 1em;
+        article {
             display: flex;
-            align-items: baseline;
-            font-weight: bold;
+            align-items: flex-end;
+            justify-content: space-between;
+            background: $color-body;
+            margin: 1em 0;
+            padding: 1em 1.4em .8em .7em;
+            border-radius: 15px;
+            box-shadow: $shadow;
+            .prix {
+                display: flex;
+                align-items: baseline;
+                font-weight: bold;
+            }
         }
     }
 }

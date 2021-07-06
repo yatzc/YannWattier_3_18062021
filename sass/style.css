@@ -221,7 +221,7 @@ header .head_band .navigation {
     MAIN - home page
 ************************************************/
 @media screen and (min-width: 1020px) {
-  .main {
+  .main_home {
     display: grid;
     grid-template-columns: 1fr 370px;
     grid-template-rows: 1fr;
@@ -497,19 +497,32 @@ header .head_band .navigation {
 /************************
     Container STARTER, MAINS et DESSERT
 *************************/
-.container_starters {
+@media screen and (min-width: 1020px) {
+  .menu_wrap {
+    display: flex;
+  }
+}
+
+.menu_wrap .container_starters {
   margin-top: 45px;
 }
 
-.container_starters,
-.container_mains,
-.container_desserts {
+@media screen and (min-width: 1020px) {
+  .menu_wrap .container_mains,
+  .menu_wrap .container_desserts {
+    margin-top: 45px;
+  }
+}
+
+.menu_wrap .container_starters,
+.menu_wrap .container_mains,
+.menu_wrap .container_desserts {
   padding: 1em 1em 0em 1em;
 }
 
-.container_starters article,
-.container_mains article,
-.container_desserts article {
+.menu_wrap .container_starters article,
+.menu_wrap .container_mains article,
+.menu_wrap .container_desserts article {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -520,9 +533,9 @@ header .head_band .navigation {
   box-shadow: 1px 5px 15px 0px rgba(177, 177, 177, 0.45);
 }
 
-.container_starters article .prix,
-.container_mains article .prix,
-.container_desserts article .prix {
+.menu_wrap .container_starters article .prix,
+.menu_wrap .container_mains article .prix,
+.menu_wrap .container_desserts article .prix {
   display: flex;
   align-items: baseline;
   font-weight: bold;
