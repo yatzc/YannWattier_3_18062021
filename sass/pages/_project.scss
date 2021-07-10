@@ -54,6 +54,12 @@
     .container_desserts
     {
         padding: 1em 1em 0em 1em;
+        @include media_desktop {
+            // background-color: $color-primary--pastel;
+            border: 5px solid $color-primary--pastel;
+            border-radius: 15px;
+            margin: 3em 1em 1em 1em;
+        }
         article {
             display: flex;
             align-items: flex-end;
@@ -63,11 +69,24 @@
             padding: 1em 1.4em .8em .7em;
             border-radius: 15px;
             box-shadow: $shadow;
+            &:hover {
+                box-shadow: $shadow_hover;
+            }
             .prix {
                 display: flex;
                 align-items: baseline;
                 font-weight: bold;
             }
+            @include media_desktop {
+                h4 {
+                    font-size: 14px;
+                }
+                h5 {
+                    font-size: 10px;
+                }
+            }
         }
+        
     }
+
 }

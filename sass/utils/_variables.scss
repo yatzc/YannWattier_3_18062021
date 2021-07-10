@@ -2,15 +2,16 @@
     COLOR
 *************************/
 $color-primary        : #9356DC;
-$color-primary--pastel: #ede7f6;
+$color-primary--pastel: #f5edff;
 $color-secondary      : #FF79DA;
 $color-tertiary       : #99E2D0;
 $color-footer         : #353535;
-$color-main           : #e8f7f3;
+$color-main           : #f6f6f6;
 $color-body           : #fff;
 $color-hover          : #979797;
 $color-icon           : #7E7E7E;
 $color-search         : #dddddd;
+$color-green          : #008766;
 
 /************************
     GRADIAN
@@ -20,8 +21,8 @@ $color-gradian        : linear-gradient(175deg, rgba(255, 121, 218, .8)   0%, rg
 /************************
     SHADOW
 *************************/
-$shadow:           1px 5px 15px 0px rgba(177, 177, 177, 0.45);
-$shadow_hover:     1px 7px 15px 0px rgba(177, 177, 177, 0.6);
+$shadow:           1px 7px 15px -2px rgba(177, 177, 177, 0.45);
+$shadow_hover:     1px 9px 15px 0px rgba(177, 177, 177, 0.6);
 
 $btn_shadow:       1px 4px 15px 2px rgba(177, 177, 177, 0.8);
 $btn_shadow_hover: 1px 7px 15px 5px rgba(145, 145, 145, 1.0);
