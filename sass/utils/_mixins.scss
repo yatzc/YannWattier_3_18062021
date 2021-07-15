@@ -15,6 +15,14 @@
     height: $ball-size;
     border-radius: $ball-size * 0.5;
     line-height: $ball-size;
+    
+}
+
+@mixin ball_size($ball_size_atribut) {
+    width: $ball_size_atribut;
+    height: $ball_size_atribut;
+    border-radius: $ball_size_atribut * 0.5;
+    line-height: $ball_size_atribut;
 }
     
 @mixin media_desktop {  

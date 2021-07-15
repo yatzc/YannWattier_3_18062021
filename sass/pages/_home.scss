@@ -17,7 +17,6 @@
         grid-row: 1;
         margin: 1em 1em 0 .5em;
     }
-
     /************************
         Container SEARCH
     *************************/
@@ -56,7 +55,6 @@
             }
         }
     }
-
     /************************
         Container TUTO
     *************************/
@@ -70,7 +68,6 @@
             padding: 1em;
         }
         .container_tuto_wrap {
-    
             @include media_tablet {
                 display: flex;
                 justify-content: space-between;
@@ -122,10 +119,8 @@
                 }
             }
         }
-        
     }
 }
-
 
 /************************
     Container RESTAURANT
@@ -135,7 +130,6 @@
     @include media_desktop {
         grid-column: 1;
         grid-row: 1;
-        // background-color: $color-primary--pastel;
         border: 5px solid $color-primary--pastel;
         border-radius: 15px;
         margin: 1em .5em 0 1em;
@@ -155,7 +149,6 @@
             grid-gap: 1em;
         }
     }
-    
     .article_restaurants {
         margin: 1em 0 1em 0;
         background-color: $color-body;
@@ -187,7 +180,6 @@
             .fa-heart {
                 top: -15px;
             }
-            
         }
         .card_new {
             background: $color-tertiary;
@@ -199,4 +191,57 @@
             top: 1em;
         }
     }
+}
+
+/*******************************
+    ANIMATION : LOADING SPINNER
+*******************************/
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate;
+    animation-duration: .001s;
+    animation-delay: 4.13s;
+    animation-fill-mode: both;
+    background: #9256dc5e;
+    cursor: wait;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1000;
+    .loader {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(calc(30deg * var(--i)));
+            &::before {
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include ball_size(30px);
+                background: $color-secondary;
+                box-shadow: 0 0 10px $color-secondary, 0 0 20px $color-primary;
+                animation-name: animate;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-delay: calc(0.09s * var(--i));
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    000% { transform: scale(1); }
+    080% { transform: scale(0); }
+    100% { transform: scale(0); }
 }

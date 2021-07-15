@@ -46,47 +46,134 @@
         @include media_desktop {
             margin-top: $padtop;
         }
-        
     }
-    
     .container_starters,
     .container_mains,
     .container_desserts
     {
         padding: 1em 1em 0em 1em;
         @include media_desktop {
-            // background-color: $color-primary--pastel;
             border: 5px solid $color-primary--pastel;
             border-radius: 15px;
             margin: 3em 1em 1em 1em;
         }
         article {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            background: $color-body;
+            border-radius: 15px;
             margin: 1em 0;
             padding: 1em 1.4em .8em .7em;
-            border-radius: 15px;
             box-shadow: $shadow;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            transition: padding-right 450ms ease-in-out;
+            @include media_desktop {
+                width: 260px;
+                padding: .5em 1.4em .5em .7em;
+            }
             &:hover {
                 box-shadow: $shadow_hover;
+                padding-right: 75px;
+                &:hover > .curtain {
+                    transform: translateX(-70px);
+                    @include media_desktop {
+                        transform: translateX(-50px);
+                    }
+                    .ball_curtain {
+                        transform: rotate(45deg)scaleX(-1);
+                    }
+                }
             }
-            .prix {
-                display: flex;
-                align-items: baseline;
-                font-weight: bold;
-            }
-            @include media_desktop {
-                h4 {
+            h4 {
+                margin: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                @include media_desktop {
                     font-size: 14px;
                 }
-                h5 {
+            }
+            p {
+                margin: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                @include media_desktop {
                     font-size: 10px;
                 }
             }
+            .prix {
+                font-weight: bold;
+                margin-right: .4em;
+                @include media_desktop {
+                    margin:0 0 .26em 0;
+                }
+            }
         }
-        
     }
+}
 
+
+/************************
+    ANIMATION - SLIDE
+*************************/
+.article_starters:nth-child(1) { animation: cascade 1000ms ease-in-out; }
+.article_starters:nth-child(2) { animation: cascade 1300ms ease-in-out; }
+.article_starters:nth-child(3) { animation: cascade 1600ms ease-in-out; }
+.article_starters:nth-child(4) { animation: cascade 2000ms ease-in-out; }
+
+.article_mains:nth-child(1)    { animation: cascade 1000ms ease-in-out; }
+.article_mains:nth-child(2)    { animation: cascade 1300ms ease-in-out; }
+.article_mains:nth-child(3)    { animation: cascade 1600ms ease-in-out; }
+.article_mains:nth-child(4)    { animation: cascade 2000ms ease-in-out; }
+
+.article_desserts:nth-child(1) { animation: cascade 1000ms ease-in-out; }
+.article_desserts:nth-child(2) { animation: cascade 1300ms ease-in-out; }
+.article_desserts:nth-child(3) { animation: cascade 1600ms ease-in-out; }
+.article_desserts:nth-child(4) { animation: cascade 2000ms ease-in-out; }
+
+@keyframes cascade {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/************************
+    ANIMATION - CURTAIN
+*************************/
+.text_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5em;
+}
+.curtain {
+    width:  80px;
+    height: 80px;
+    color: #f6f6f6;
+    background-color: #99E2D0;
+    position: absolute;
+    right: -81px;
+    bottom: -3px;
+    transition: transform 330ms ease-in-out;
+    .ball_curtain {
+        @include ball_size(24px);
+        margin: 2em 1.6em;
+        color: #99E2D0;
+        font-weight: bolder;
+        background-color: #f6f6f6;
+        text-align: center;
+        vertical-align: middle;
+        transform: rotate(-225deg)scaleX(-1);
+        transition: transform 530ms ease-in-out;
+        @include media_desktop {
+        @include ball_size(20px);
+        margin: 2.3em 1em;
+        }
+    }
 }
