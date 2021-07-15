@@ -82,7 +82,7 @@ body {
 
 @media screen and (min-width: 1020px) {
   body {
-    max-width: 1000px;
+    width: 100%;
     margin: auto;
   }
 }
@@ -98,10 +98,11 @@ h2 {
 }
 
 h3 {
-  position: relative;
-  margin-bottom: 1.7em;
   font-size: 16px;
   font-weight: 300;
+  position: relative;
+  margin-bottom: 1.7em;
+  margin-left: .4em;
 }
 
 h3::after {
@@ -116,8 +117,8 @@ h3::after {
 
 h4 {
   font-size: 19px;
-  margin-bottom: .5em;
   font-weight: 700;
+  margin-bottom: .5em;
 }
 
 h5 {
@@ -261,6 +262,17 @@ header .head_band .navigation {
     display: grid;
     grid-template-columns: 1fr 350px;
     grid-template-rows: 1fr;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .main_home {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 1000px;
   }
 }
 
@@ -598,6 +610,17 @@ header .head_band .navigation {
   background-color: #f6f6f6;
 }
 
+@media screen and (min-width: 1020px) {
+  .container_image .title_band {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 1000px;
+  }
+}
+
 .container_image .title_band h1 {
   padding-left: 1em;
 }
@@ -612,6 +635,7 @@ header .head_band .navigation {
 @media screen and (min-width: 1020px) {
   .menu_wrap {
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -645,6 +669,7 @@ header .head_band .navigation {
 .menu_wrap .container_starters article,
 .menu_wrap .container_mains article,
 .menu_wrap .container_desserts article {
+  background-color: #fff;
   border-radius: 15px;
   margin: 1em 0;
   padding: 1em 1.4em .8em .7em;

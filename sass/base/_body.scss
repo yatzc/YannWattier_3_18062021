@@ -2,7 +2,7 @@ body {
     background-color: $color-main;
     font-family: 'Roboto', sans-serif;
     @include media_desktop {
-        max-width: 1000px;
+        width: 100%;
         margin: auto;
     }
 }
