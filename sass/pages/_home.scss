@@ -53,6 +53,8 @@
                 border: none;
                 background-color: transparent;
                 width: 110px;
+                cursor: pointer;
+                &:focus { outline: 0; }
             }
         }
         .text_search {

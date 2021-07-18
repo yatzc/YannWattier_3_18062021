@@ -332,6 +332,11 @@ header .head_band .navigation {
   border: none;
   background-color: transparent;
   width: 110px;
+  cursor: pointer;
+}
+
+.container_top_wrap .container_search .box_search input:focus {
+  outline: 0;
 }
 
 .container_top_wrap .container_search .text_search {
