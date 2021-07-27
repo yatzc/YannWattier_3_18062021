@@ -138,6 +138,7 @@ a {
 input {
   font-size: 13px;
   font-weight: 700;
+  font-family: 'Roboto';
 }
 
 p {
@@ -531,7 +532,7 @@ header .head_band .navigation {
   align-items: center;
   animation: animate;
   animation-duration: .001s;
-  animation-delay: 4.13s;
+  animation-delay: 2.18s;
   animation-fill-mode: both;
   background: #9256dc5e;
   cursor: wait;
@@ -789,6 +790,10 @@ header .head_band .navigation {
   animation: cascade 2000ms ease-in-out;
 }
 
+.article_starters:nth-child(5) {
+  animation: cascade 2000ms ease-in-out;
+}
+
 .article_mains:nth-child(1) {
   animation: cascade 1000ms ease-in-out;
 }
@@ -805,6 +810,10 @@ header .head_band .navigation {
   animation: cascade 2000ms ease-in-out;
 }
 
+.article_mains:nth-child(5) {
+  animation: cascade 2000ms ease-in-out;
+}
+
 .article_desserts:nth-child(1) {
   animation: cascade 1000ms ease-in-out;
 }
@@ -818,6 +827,10 @@ header .head_band .navigation {
 }
 
 .article_desserts:nth-child(4) {
+  animation: cascade 2000ms ease-in-out;
+}
+
+.article_desserts:nth-child(5) {
   animation: cascade 2000ms ease-in-out;
 }
 
